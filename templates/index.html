@@ -10,35 +10,53 @@ Home
 
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
     <strong>Welcome to R TXT</strong> You Can Do Anything With Your TEXT.
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    <button type="button" class="btn-close" data-bs-dismiss="alert"
+        aria-label="Close"></button>
 </div>
-<form method="get" action="/chak">
+<form method="post" action="/chak/">
+    {% csrf_token %}
     <div class="container my-3">
-      
-      <div class="input-group">
-        <span class="input-group-text">Enter Your Text</span>
-        <textarea class="form-control" aria-label="With textarea" rows="9" name="usertxt"></textarea>
-    </div>
 
-    <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" name="rv">
-        <label class="form-check-label" for="flexSwitchCheckDefault">Remove vowel</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" name="rs">
-        <label class="form-check-label" for="flexSwitchCheckDefault">Remove Extra Space</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" name="du">
-        <label class="form-check-label" for="flexSwitchCheckDefault">Do UPPERCASE</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" name="rp">
-        <label class="form-check-label" for="flexSwitchCheckDefault">Remove Punctuation Marks</label>
-      </div>
-    
-      <button style="text-align: center; margin-left:48%;" type="submit" class="btn btn-secondary btn-lg">Submit</button>
-</div>
+        <div class="input-group">
+            <span class="input-group-text">Enter Your Text</span>
+            <textarea class="form-control" aria-label="With textarea" rows="9"
+                name="usertxt"></textarea>
+        </div>
+
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch"
+                id="flexSwitchCheckDefault" name="rv">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Remove
+                vowel</label>
+        </div>
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch"
+                id="flexSwitchCheckDefault" name="rs">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Remove
+                Extra Space</label>
+        </div>
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch"
+                id="flexSwitchCheckDefault" name="du">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Do
+                UPPERCASE</label>
+        </div>
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch"
+                id="flexSwitchCheckDefault" name="rp">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Remove
+                Punctuation Marks</label>
+        </div>
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch"
+                id="flexSwitchCheckDefault" name="rnl">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Remove
+                Extra New Linre</label>
+        </div>
+
+        <button style="text-align: center;margin-left:48%;margin-bottom: 22%;"
+            type="submit" class="btn btn-secondary btn-lg">Submit</button>
+    </div>
 </form>
 
 {% endblock body %}

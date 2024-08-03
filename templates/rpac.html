@@ -1,14 +1,14 @@
 {% extends "all.html" %}
 
-{% block title %}
+{% block titel %}
 Output Page
-{% endblock title %}
+{% endblock titel %}
 
 {% block body %}
 <div style="margin-bottom: 50px; font-family: Arial, sans-serif; padding: 20px; border: 1px solid #ddd; background-color: #f9f9f9; border-radius: 8px; max-width: 800px; margin: auto;">
     <h2 style="color: #333; text-align: center;">Output</h2>
     <hr style="border: 0; height: 4px; background: #000000; margin: 20px 0;">
-    <p style="font-size: 16px; line-height: 1.5; color: #555;">{{ content }}</p>
+    <p style="font-size: 16px; line-height: 1.5; color: #555;"><pre>{{ content }}</pre></p>
 </div>
 <div style="margin-top: 50px; padding: 20px; border: 1px solid #ddd; background-color: #e9ecef; border-radius: 8px; max-width: 800px; margin: auto; display: flow; margin-top: 4%;">
     <div class="alert alert-warning alert-dismissible fade show" role="alert">
@@ -19,3 +19,6 @@ Output Page
     <p style="font-size: 16px; line-height: 1.5; color: #555; text-align: center;">Thank you for visiting our page. <a href="/" style="color: #007bff; text-decoration: none;">Click here</a> to return to the home page and try again.</p>
 </div>
 {% endblock body %}
+{% block fut %}
+  
+{% endblock fut %}
